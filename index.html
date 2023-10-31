@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Piano</title>
 </head>
 <body>
+    <h1>Piano</h1>
     <piano>
-        <button class="tecla">Do</button>
-        <button class="tecla">Re</button>
-        <button class="tecla">Mi</button>
-        <button class="tecla">Fa</button>
-        <button class="tecla">Sol</button>
-        <button class="tecla">La</button>
-        <button class="tecla">Si</button>
+        <octava>
+            <piano-row>
+                <tecla>C</tecla>
+                <tecla>D</tecla>
+                <tecla>E</tecla>
+                <tecla>F</tecla>
+                <tecla>G</tecla>
+                <tecla>A</tecla>
+                <tecla>B</tecla>
+            </piano-row>
+            <piano-row style="bottom: 270px;">
+                <tecla class="negra">C#</tecla>
+                <tecla class="negra">D#</tecla>
+                <tecla class="negra" style="visibility: hidden;"></tecla>
+                <tecla class="negra">F#</tecla>
+                <tecla class="negra">G#</tecla>
+                <tecla class="negra">A#</tecla>
+            </piano-row>
+        </octava>
     </piano>
 </body>
 </html>
