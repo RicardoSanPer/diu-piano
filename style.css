@@ -1,0 +1,108 @@
+body{
+    background-image: url("bg.jpg");
+    background-size: cover;
+
+    text-align: center;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+
+    padding-top: 30px;
+}
+
+piano
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    user-select: none;
+    padding: 50px;
+
+    height: 250px;
+}
+
+label
+{
+    color: rgb(253, 247, 227);
+    text-shadow: rgb(218, 208, 156) 0px 0px 4px;
+    font-size: xx-large ;
+    
+}
+
+piano-row
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    position: relative;
+}
+
+.main
+{
+    background-color: rgba(85, 67, 43, 0.3);
+    padding: 20px;
+    margin-left: 400px;
+    margin-right: 400px;
+
+    border: solid rgb(153, 137, 85) 3px;
+    border-radius: 10px;
+    
+    backdrop-filter: blur(4px);
+}
+
+tecla
+{
+    background-color: white;
+    border: rgb(245, 235, 202) solid 2px;
+    border-radius: 10px;
+
+    box-shadow: 0 9px rgba(85, 67, 43, 0.6);
+
+    height: 240px;
+    width: 60px;
+    margin: 2px;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    transition: 0.1s;
+
+    font-size: large;
+    text-align: center;
+
+    z-index: 0;
+
+    cursor: pointer;
+
+    color: rgb(151, 124, 89);
+}
+
+.negra
+{
+    background-color: rgb(151, 124, 89);
+    height: 160px;
+    width: 40px;
+
+    margin-left: 12px;
+    margin-right: 12px;
+
+    z-index: 1;
+
+    color: white;
+}
+
+tecla:active
+{
+    background-color: rgb(241, 224, 168);
+
+    box-shadow: 0 5px rgba(85, 67, 43, 0.6);
+    transform: translate(0,4px);
+}
+
+.negra:active
+{
+    background-color: rgb(241, 224, 168);
+
+    box-shadow: 0 5px rgba(85, 67, 43, 0.6);
+    transform: translate(0,4px);
+}
