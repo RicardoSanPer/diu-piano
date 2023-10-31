@@ -43,6 +43,7 @@ piano-row
     padding: 20px;
     margin-left: 400px;
     margin-right: 400px;
+    width: 1000px;
 
     border: solid rgb(153, 137, 85) 3px;
     border-radius: 10px;
