@@ -11,23 +11,61 @@
     <piano>
         <octava>
             <piano-row>
-                <tecla>C</tecla>
-                <tecla>D</tecla>
-                <tecla>E</tecla>
-                <tecla>F</tecla>
-                <tecla>G</tecla>
-                <tecla>A</tecla>
-                <tecla>B</tecla>
+                <tecla onmousedown="playSound('3-c')">C</tecla>
+                <tecla onmousedown="playSound('3-d')">D</tecla>
+                <tecla onmousedown="playSound('3-e')">E</tecla>
+                <tecla onmousedown="playSound('3-f')">F</tecla>
+                <tecla onmousedown="playSound('3-g')">G</tecla>
+                <tecla onmousedown="playSound('3-a')">A</tecla>
+                <tecla onmousedown="playSound('3-b')">B</tecla>
             </piano-row>
             <piano-row style="bottom: 270px;">
-                <tecla class="negra">C#</tecla>
-                <tecla class="negra">D#</tecla>
+                <tecla class="negra" onmousedown="playSound('3-cs')">C#</tecla>
+                <tecla class="negra" onmousedown="playSound('3-ds')">D#</tecla>
                 <tecla class="negra" style="visibility: hidden;"></tecla>
-                <tecla class="negra">F#</tecla>
-                <tecla class="negra">G#</tecla>
-                <tecla class="negra">A#</tecla>
+                <tecla class="negra" onmousedown="playSound('3-fs')">F#</tecla>
+                <tecla class="negra" onmousedown="playSound('3-gs')">G#</tecla>
+                <tecla class="negra" onmousedown="playSound('3-as')">A#</tecla>
+            </piano-row>
+        </octava>
+        <octava>
+            <piano-row>
+                <tecla onmousedown="playSound('4-c')">C</tecla>
+                <tecla onmousedown="playSound('4-d')">D</tecla>
+                <tecla onmousedown="playSound('4-e')">E</tecla>
+                <tecla onmousedown="playSound('4-f')">F</tecla>
+                <tecla onmousedown="playSound('4-g')">G</tecla>
+                <tecla onmousedown="playSound('4-a')">A</tecla>
+                <tecla onmousedown="playSound('4-b')">B</tecla>
+            </piano-row>
+            <piano-row style="bottom: 270px;">
+                <tecla class="negra" onmousedown="playSound('4-cs')">C#</tecla>
+                <tecla class="negra" onmousedown="playSound('4-ds')">D#</tecla>
+                <tecla class="negra" style="visibility: hidden;"></tecla>
+                <tecla class="negra" onmousedown="playSound('4-fs')">F#</tecla>
+                <tecla class="negra" onmousedown="playSound('4-gs')">G#</tecla>
+                <tecla class="negra" onmousedown="playSound('4-as')">A#</tecla>
             </piano-row>
         </octava>
     </piano>
+    <input type="range" min="0" max="100" value="50" step="1" oninput="setVolume(this.value)" id="volume">
+    <label for="volume">Volumen</label>
 </body>
+<footer>
+    <script>
+        let volume = 50 / 100;
+        function playSound(name)
+        {
+            var audio = new Audio("resources/"+name+".wav");
+            audio.volume = volume;
+            audio.play();
+        }
+
+        function setVolume(val)
+        {
+            volume = val / 100;
+        }
+    </script>
+    
+</footer>
 </html>
