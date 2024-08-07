@@ -1,5 +1,9 @@
 # Piano
-Piano Web por Ricardo Sánchez Pérez
+Piano Web por Ricardo Sánchez Pérez.
+
+Se ejecuta abriendo el archivo ```index.html``` en un navegador web.
+
+Creado para el curso de Diseño de Interfaces de Usuario.
 
 ## Creditos
 Notas de piano:
